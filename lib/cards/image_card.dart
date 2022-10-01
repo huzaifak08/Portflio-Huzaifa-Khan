@@ -6,7 +6,7 @@ class ImageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String description =
-        "I am a Computer Science (CS) student from Comsats Wah.I am a Flutter App Mobile Developer . I am good at coding in PUTHON ,JAVA(POP+OOP+GUI) and C#(POP+OOP) also I am experienced in HTML & CSS. I want to get a part time job in order to gain more experience.";
+        "I am a Computer Science (CS) student from Comsats Wah.I am a Flutter App Mobile Developer . I am good at coding in PYTHON ,JAVA(POP+OOP+GUI) and C#(POP+OOP) also I am experienced in HTML & CSS. I want to get a part time job in order to gain more experience.";
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
@@ -23,9 +23,16 @@ class ImageCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('assets/dp.jpg'),
-                      radius: 60,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) {
+                          return DetailScreen();
+                        }));
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/dp.jpg'),
+                        radius: 60,
+                      ),
                     ),
                   ),
                   SizedBox(height: 12),
@@ -60,6 +67,40 @@ class ImageCard extends StatelessWidget {
             ),
           )
         ]),
+      ),
+    );
+  }
+}
+
+class DetailScreen extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GestureDetector(
+        child: Center(
+          child: Container(
+            height: 800,
+            width: 450,
+            child: Column(
+              children: [
+                IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(Icons.cancel)),
+                Hero(
+                  child: Image.asset(
+                    'assets/dp.jpg',
+                    // fit: BoxFit.cover,
+                  ),
+                  tag: 'imagehero',
+                ),
+              ],
+            ),
+          ),
+        ),
+        onTap: () {
+          Navigator.pop(context);
+        },
       ),
     );
   }

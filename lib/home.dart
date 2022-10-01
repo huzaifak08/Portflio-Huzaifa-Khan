@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hk_potfolio/contact_card.dart';
-import 'package:hk_potfolio/education_card.dart';
-import 'package:hk_potfolio/image_card.dart';
+import 'package:hk_potfolio/cards/certificates_card.dart';
+import 'package:hk_potfolio/cards/contact_card.dart';
+import 'package:hk_potfolio/cards/education_card.dart';
+import 'package:hk_potfolio/cards/image_card.dart';
+import 'package:hk_potfolio/cards/profiles_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,7 +24,15 @@ class HomePage extends StatelessWidget {
                 EducationCard() // Education Card
               ],
             ),
-          )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              CertficateCard(), // Certificate Card
+              ProfilesCard(), // Profile Card
+            ],
+          ),
+          SizedBox(height: 12),
         ],
       ),
     );
