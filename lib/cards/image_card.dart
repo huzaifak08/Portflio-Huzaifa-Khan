@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../onHoverButton.dart';
+
 class ImageCard extends StatelessWidget {
   const ImageCard({super.key});
 
@@ -29,9 +31,11 @@ class ImageCard extends StatelessWidget {
                           return DetailScreen();
                         }));
                       },
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/dp.jpg'),
-                        radius: 60,
+                      child: OnHoverButton(
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage('assets/dp.jpg'),
+                          radius: 60,
+                        ),
                       ),
                     ),
                   ),
@@ -55,6 +59,8 @@ class ImageCard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       description,
+                      textAlign: TextAlign.center,
+                      softWrap: true,
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w200,
