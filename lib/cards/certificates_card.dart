@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import '../onHoverButton.dart';
+
 class CertficateCard extends StatelessWidget {
   const CertficateCard({super.key});
 
@@ -29,21 +31,27 @@ class CertficateCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: cSharpUrl,
-                  child: Image.asset(
-                    'assets/c-sharp.png',
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: cSharpUrl,
+                    child: Image.asset(
+                      'assets/c-sharp.png',
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: sqlUrl,
-                  child: Image.asset('assets/mysql.png'),
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: sqlUrl,
+                    child: Image.asset('assets/mysql.png'),
+                  ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: flutterUrl,
-                  child: Image.asset('assets/flutter.png'),
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: flutterUrl,
+                    child: Image.asset('assets/flutter.png'),
+                  ),
                 )
               ],
             ),

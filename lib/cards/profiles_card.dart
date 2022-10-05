@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import '../onHoverButton.dart';
+
 class ProfilesCard extends StatelessWidget {
   const ProfilesCard({super.key});
 
@@ -29,19 +31,25 @@ class ProfilesCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: linkedinUrl,
-                  child: Image.asset('assets/LinkedIn.png'),
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: linkedinUrl,
+                    child: Image.asset('assets/LinkedIn.png'),
+                  ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: twitterUrl,
-                  child: Image.asset('assets/Twitter.png'),
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: twitterUrl,
+                    child: Image.asset('assets/Twitter.png'),
+                  ),
                 ),
                 SizedBox(width: 10),
-                GestureDetector(
-                  onTap: gitHubUrl,
-                  child: Image.asset('assets/GitHub.png'),
+                OnHoverButton(
+                  child: GestureDetector(
+                    onTap: gitHubUrl,
+                    child: Image.asset('assets/GitHub.png'),
+                  ),
                 )
               ],
             ),
