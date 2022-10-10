@@ -23,28 +23,28 @@ class ProfilesCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Profiles:',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: linkedinUrl,
                     child: Image.asset('assets/LinkedIn.png'),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: twitterUrl,
                     child: Image.asset('assets/Twitter.png'),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: gitHubUrl,

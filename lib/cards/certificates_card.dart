@@ -23,14 +23,14 @@ class CertficateCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Certificates:',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: cSharpUrl,
@@ -39,14 +39,14 @@ class CertficateCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: sqlUrl,
                     child: Image.asset('assets/mysql.png'),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 OnHoverButton(
                   child: GestureDetector(
                     onTap: flutterUrl,

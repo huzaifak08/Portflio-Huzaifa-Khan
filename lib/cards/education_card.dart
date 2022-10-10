@@ -17,7 +17,7 @@ class EducationCard extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.school,
                   ),
@@ -31,7 +31,7 @@ class EducationCard extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -49,7 +49,7 @@ class EducationCard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               buildHeading('Graduation(Continue...)', 'BS Computer Science',
                   'Comsats Wah Cantt')
             ],
@@ -63,26 +63,26 @@ class EducationCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Align(
           alignment: Alignment.topLeft,
           child: Text(
             degree,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           marks,
-          style: TextStyle(fontSize: 13, color: Colors.grey),
+          style: const TextStyle(fontSize: 13, color: Colors.grey),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           board,
-          style: TextStyle(fontSize: 13, color: Colors.grey),
+          style: const TextStyle(fontSize: 13, color: Colors.grey),
         ),
       ],
     );

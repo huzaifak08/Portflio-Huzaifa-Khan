@@ -17,48 +17,48 @@ class ContactCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               buildHeading('Contact:'),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.phone,
                     size: 18,
                     color: Colors.grey,
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   buildInfo('PHONE:', '+92 340 1690149')
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.email,
                     size: 18,
                     color: Colors.grey,
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   buildInfo('EMAIL:', 'hk7928042@gmail.com')
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               buildHeading('Residentian Info.'),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.flag,
                     size: 18,
                     color: Colors.grey,
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   buildInfo('NATIONALITY:', 'PAKISTANI'),
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.location_city,
                     size: 18,
                     color: Colors.grey,
@@ -79,7 +79,7 @@ class ContactCard extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
@@ -92,15 +92,15 @@ class ContactCard extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 13,
             color: Colors.grey,
           ),
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Text(
           info,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 13,
             color: Colors.grey,
           ),

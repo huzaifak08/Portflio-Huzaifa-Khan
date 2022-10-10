@@ -31,7 +31,7 @@ class ImageCard extends StatelessWidget {
                           return DetailScreen();
                         }));
                       },
-                      child: OnHoverButton(
+                      child: const OnHoverButton(
                         child: CircleAvatar(
                           backgroundImage: AssetImage('assets/dp.jpg'),
                           radius: 60,
@@ -39,29 +39,29 @@ class ImageCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 12),
-                  Text(
+                  const SizedBox(height: 12),
+                  const Text(
                     'Huzaifa Khan',
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 12),
-                  Text(
+                  const SizedBox(height: 12),
+                  const Text(
                     'Flutter Developer',
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       description,
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Colors.grey,
@@ -92,7 +92,7 @@ class DetailScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.cancel)),
+                    icon: const Icon(Icons.cancel)),
                 Hero(
                   child: Image.asset(
                     'assets/dp.jpg',

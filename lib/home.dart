@@ -12,46 +12,41 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: ListView(
-          children: [
-            ImageCard(), // Image Card
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Responsive.isDesktop(context)
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ContactCard(), // Contact Card
-                        EducationCard() // Education Card
-                      ],
-                    )
-                  : Column(
-                      children: [
-                        ContactCard(),
-                        EducationCard(),
-                      ],
-                    ),
-            ),
-            Responsive.isDesktop(context)
+      body: ListView(
+        children: [
+          const ImageCard(), // Image Card
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Responsive.isDesktop(context)
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CertficateCard(), // Certificate Card
-                      ProfilesCard(), // Profile Card
+                    children: const [
+                      ContactCard(), // Contact Card
+                      EducationCard() // Education Card
                     ],
                   )
                 : Column(
-                    children: [
-                      CertficateCard(),
-                      ProfilesCard(),
+                    children: const [
+                      ContactCard(),
+                      EducationCard(),
                     ],
                   ),
-            SizedBox(height: 12),
-          ],
-        ),
+          ),
+          Responsive.isDesktop(context)
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    CertficateCard(), // Certificate Card
+                    ProfilesCard(), // Profile Card
+                  ],
+                )
+              : Column(
+                  children: const [
+                    CertficateCard(),
+                    ProfilesCard(),
+                  ],
+                ),
+        ],
       ),
     );
   }
