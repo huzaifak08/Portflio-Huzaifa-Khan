@@ -8,7 +8,7 @@ class ImageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String description =
-        "I am a Computer Science (CS) student from Comsats Wah.I am a Flutter App Mobile Developer . I am good at coding in PYTHON ,JAVA(POP+OOP+GUI) and C#(POP+OOP) also I am experienced in HTML & CSS. I want to get a part time job in order to gain more experience.";
+        "I am a Computer Science (CS) student from Comsats Wah.I am a Flutter App Mobile Developer . I am good at coding in Flutter ,JAVA(POP+OOP+GUI) and C#(POP+OOP) also I have experience of 6 months in Flutter. I want to get a part time job in order to gain more experience.";
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
@@ -63,8 +63,8 @@ class ImageCard extends StatelessWidget {
                       softWrap: true,
                       style: TextStyle(
                         fontSize: 12,
-                        fontWeight: FontWeight.w200,
-                        color: Color.fromARGB(255, 175, 174, 174),
+                        fontWeight: FontWeight.w300,
+                        color: Colors.grey,
                       ),
                     ),
                   )
