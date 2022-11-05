@@ -4,7 +4,10 @@ import 'package:hk_potfolio/cards/contact_card.dart';
 import 'package:hk_potfolio/cards/education_card.dart';
 import 'package:hk_potfolio/cards/image_card.dart';
 import 'package:hk_potfolio/cards/profiles_card.dart';
+import 'package:hk_potfolio/cards/theme_card.dart';
 import 'package:hk_potfolio/responsive.dart';
+import 'package:hk_potfolio/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,12 +25,14 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
                       ContactCard(), // Contact Card
+                      ThemeCard(),
                       EducationCard() // Education Card
                     ],
                   )
                 : Column(
                     children: const [
                       ContactCard(),
+                      ThemeCard(),
                       EducationCard(),
                     ],
                   ),
